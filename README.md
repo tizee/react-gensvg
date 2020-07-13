@@ -1,9 +1,8 @@
-<center>
-  <div>
-    <h1>react-gensvg<h1>
-    <p>A tsx/jsx file generator for svg files</p>
-  </div>
-</center>
+<div align="center">
+  <h1>react-gensvg<h1>
+
+  <p>A tsx/jsx file generator for svg files</p>
+</div>
 
 ## Why
 
@@ -34,6 +33,18 @@ convert('./static/icons', './src/svg', true);
 ```
 
 ### CLI
+
+```
+Usage: cli [options]
+
+Options:
+  --version   Show version number                            [boolean]
+  --src, -s   source directory for svg files       [string] [required]
+  --dist, -d  destination directory for generated files
+                                                   [string] [required]
+  --jsx       flag for jsx file extension. default: false    [boolean]
+  -h, --help  Show help                                      [boolean]
+```
 
 ```bash
 npx svgcli -s ./static/icons -d ./src/svg --jsx
