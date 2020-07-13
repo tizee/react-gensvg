@@ -4,6 +4,10 @@
   <p>A tsx/jsx file generator for svg files</p>
 </div>
 
+[![Build Status][build-badge]][build]
+[![Code Coverage][coverage-badge]][coverage]
+[![PRs Welcome][pr-welcome]](http://makeapullrequest.com)
+
 ## Why
 
 This project is inspired by [react-feather](https://github.com/feathericons/react-feather) and [typescript-react-svg-icon-generator](https://github.com/jackple/typescript-react-svg-icon-generator). It's tedious to migrate SVG files to tsx/jsx files manually.
@@ -74,3 +78,9 @@ export default /* FileName */;
 ## LISENCE
 
 [MIT](./LISENCE)
+
+[build]: https://travis-ci.com/tizee/react-domproperty
+[build-badge]: https://travis-ci.org/tizee/react-domproperty.svg?branch=master
+[coverage]: https://codecov.io/github/tizee/react-domproperty
+[coverage-badge]: https://img.shields.io/codecov/c/github/tizee/react-domproperty.svg?style=flat-square
+[pr-welcome]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square

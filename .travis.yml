@@ -1,0 +1,19 @@
+language: node_js
+cache: npm
+notifications:
+  email: false
+node_js:
+  - 13
+  - node
+os:
+  - linux
+install: npm install
+branches:
+  only:
+    - master
+script:
+  - npm install codecov
+  - npm run test
+  - npm run build
+after_success:
+  - ./node_modules/.bin/codecov --token=CODECOV_TOKEN
