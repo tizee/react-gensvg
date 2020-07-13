@@ -52,6 +52,9 @@ const genFile = (
     if (node && node.children && node.children.length > 0) {
       const raw_code = genReactCode(CAMELCASE(componentName), node);
       const format_code = format(raw_code, prettierConfig);
+      if (!fs.existsSync(DIST)) {
+        fs.mkdirSync(DIST, { recursive: true });
+      }
       fs.writeFileSync(path.join(DIST, filename), format_code);
     }
   });
