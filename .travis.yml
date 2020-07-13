@@ -7,13 +7,14 @@ node_js:
   - node
 os:
   - linux
-install: npm install
+install:
+  - npm install
+  - npm install codecov -g
 branches:
   only:
     - master
 script:
-  - npm install codecov
   - npm run test
   - npm run build
 after_success:
-  - ./node_modules/.bin/codecov --token=CODECOV_TOKEN
+  - codecov --token=CODECOV_TOKEN
