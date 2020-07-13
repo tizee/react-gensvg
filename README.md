@@ -35,7 +35,7 @@ convert('./static/icons', './src/svg', true);
 ### CLI
 
 ```
-Usage: cli [options]
+Usage: svgcli [options]
 
 Options:
   --version   Show version number                            [boolean]
