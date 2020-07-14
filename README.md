@@ -11,7 +11,7 @@
 ## Why
 
 This project is inspired by [react-feather](https://github.com/feathericons/react-feather) and [typescript-react-svg-icon-generator](https://github.com/jackple/typescript-react-svg-icon-generator). It's tedious to migrate SVG files to tsx/jsx files manually.
-This is a tool help developer to generate SVG icon component with tsx/jsx extenion in ease.
+This is a tool help developer to generate SVG icon component with tsx/jsx extenion easily.
 
 ## Usage
 
