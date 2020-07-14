@@ -4,8 +4,10 @@
   <p>A tsx/jsx file generator for svg files</p>
 </div>
 
+[![version][version-badge]][package]
 [![Build Status][build-badge]][build]
 [![Code Coverage][coverage-badge]][coverage]
+[![MIT License][license-badge]][license]
 [![PRs Welcome][pr-welcome]](http://makeapullrequest.com)
 
 ## Why
@@ -79,6 +81,10 @@ export default /* FileName */;
 
 [MIT](./LISENCE)
 
+[package]: https://www.npmjs.com/package/react-gensvg
+[version-badge]: https://img.shields.io/npm/v/react-gensvg.svg?style=flat-square
+[license]: https://github.com/tizee/react-gensvg/blob/master/LICENSE
+[license-badge]: https://img.shields.io/npm/l/react-domproperty.svg?style=flat-square
 [build]: https://travis-ci.com/tizee/react-domproperty
 [build-badge]: https://travis-ci.org/tizee/react-domproperty.svg?branch=master
 [coverage]: https://codecov.io/github/tizee/react-domproperty
