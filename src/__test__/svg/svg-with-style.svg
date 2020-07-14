@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <defs>
+    <style>
+          .c-1{
+          fill: #83a4d7;
+          }
+    </style>
+  </defs>
+  <title>orbit</title>
+  <g id="sky">
+    <path class="c-1" d="M17,8c-.45-3.41-3.8-4.91-4-5S9.72,2.27,8,4c-2,2.05-.88,6,1,8,.36.39,2.59,2.72,5,2S17.3,10.29,17,8Z" transform="translate(-2.98 -2.82)" />
+  </g>
+</svg>

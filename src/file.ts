@@ -4,6 +4,13 @@ import { parse } from 'svg-parser';
 import { Options, format } from 'prettier';
 import { CAMELCASE, genReactCode } from './helper'; // component name
 
+function writeFile(filename: string, dist: string, code: string): void {
+  if (!fs.existsSync(dist)) {
+    fs.mkdirSync(dist, { recursive: true });
+  }
+  fs.writeFileSync(path.join(dist, filename), code);
+}
+
 function getSvgFiles(filenames: Array<string>, parent: string) {
   let svg_files: Array<string> = [];
   for (let filename of filenames) {
@@ -36,13 +43,11 @@ const genFile = (
     trailingComma: 'es5',
   }
 ) => {
-  const SOURCE = src;
-  const DIST = dist;
-  if (!fs.existsSync(SOURCE)) {
+  if (!fs.existsSync(src)) {
     throw new Error('Src dir does not exist!');
   }
-  const filenames = fs.readdirSync(SOURCE, 'utf-8');
-  const svg_filenames = getSvgFiles(filenames, SOURCE);
+  const filenames = fs.readdirSync(src, 'utf-8');
+  const svg_filenames = getSvgFiles(filenames, src);
   svg_filenames.forEach(file => {
     const content = fs.readFileSync(file, 'utf-8');
     const node = parse(content);
@@ -51,11 +56,12 @@ const genFile = (
     const filename = componentName + extension;
     if (node && node.children && node.children.length > 0) {
       const raw_code = genReactCode(CAMELCASE(componentName), node);
-      const format_code = format(raw_code, prettierConfig);
-      if (!fs.existsSync(DIST)) {
-        fs.mkdirSync(DIST, { recursive: true });
+      try {
+        const format_code = format(raw_code, prettierConfig);
+        writeFile(filename, dist, format_code);
+      } catch (error) {
+        writeFile(filename, dist, raw_code);
       }
-      fs.writeFileSync(path.join(DIST, filename), format_code);
     }
   });
 };
