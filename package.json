@@ -2,7 +2,7 @@
   "name": "react-gensvg",
   "version": "0.0.1",
   "description": "A tsx/jsx file generator for svg files",
-  "author": "tizee",
+  "author": "tizee <pobomp@gmail.com>(https://tizee.github.io)",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
@@ -10,6 +10,14 @@
     "dist",
     "cli"
   ],
+  "homepage": "https://github.com/tizee/react-gensvg#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tizee/react-gensvg"
+  },
+  "bugs": {
+    "url": "https://github.com/tizee/react-gensvg"
+  },
   "scripts": {
     "ts-check": "tsc --noEmit",
     "ts-check:watch": "tsc --noEmit --watch",
@@ -68,6 +76,7 @@
     "svgcli": "cli/index.js"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=12",
+    "npm": ">=6"
   }
 }
