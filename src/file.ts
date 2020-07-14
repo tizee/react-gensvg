@@ -31,7 +31,7 @@ function getSvgFiles(filenames: Array<string>, parent: string) {
 const genFile = (
   src: string,
   dist: string,
-  tsx = true,
+  jsx: boolean = false,
   prettierConfig: Options = {
     parser: 'babel',
     arrowParens: 'avoid',
@@ -51,7 +51,7 @@ const genFile = (
   svg_filenames.forEach(file => {
     const content = fs.readFileSync(file, 'utf-8');
     const node = parse(content);
-    const extension = tsx ? '.tsx' : '.jsx';
+    const extension = jsx ? '.jsx' : '.tsx';
     const componentName = path.parse(file).name;
     const filename = componentName + extension;
     if (node && node.children && node.children.length > 0) {

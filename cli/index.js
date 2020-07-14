@@ -20,7 +20,8 @@ const argv = yargs
     },
     jsx: {
       type: 'boolean',
-      description: 'flag for jsx file extension. default: false',
+      description: 'flag for jsx file extension.',
+      default: false,
     },
   })
   .help('h')

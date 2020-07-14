@@ -79,7 +79,7 @@ describe('generate file', () => {
   test('generate tsx file', () => {
     const dir = path.resolve(__dirname);
     del.sync([`${dir}/code`]);
-    genFile(`${dir}/svg`, `${dir}/code`);
+    genFile(`${dir}/svg`, `${dir}/code`, false);
     expect(fs.readFileSync(`${dir}/code/arrow-down.tsx`, 'utf-8')).toBe(
       valid_file
     );
@@ -87,7 +87,7 @@ describe('generate file', () => {
   test('generate jsx file', () => {
     const dir = path.resolve(__dirname);
     del.sync([`${dir}/code`]);
-    genFile(`${dir}/svg`, `${dir}/code`, false);
+    genFile(`${dir}/svg`, `${dir}/code`, true);
     expect(fs.readFileSync(`${dir}/code/arrow-down.jsx`, 'utf-8')).toBe(
       valid_file
     );
