@@ -30,11 +30,11 @@ convert('./static/icons', './src/svg');
 /* ./static/icons/A.svg -> ./src/svg/A.tsx */
 
 // generate jsx files
-convert('./static/icons', './src/svg', false);
-/* ./static/icons/A.svg -> ./src/svg/A.jsx */
+convert('./static/icons', './src/svg', true);
+/* ./static/icons/A.svg -> ./src/svg/A.jsx*/
 
 // generate tsx files explicitly
-convert('./static/icons', './src/svg', true);
+convert('./static/icons', './src/svg', false);
 /* ./static/icons/A.svg -> ./src/svg/A.tsx */
 ```
 
