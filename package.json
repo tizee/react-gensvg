@@ -1,6 +1,6 @@
 {
   "name": "react-gensvg",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A tsx/jsx file generator for svg files",
   "author": "tizee <pobomp@gmail.com>(https://tizee.github.io)",
   "license": "MIT",
