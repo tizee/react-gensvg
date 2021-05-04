@@ -62,7 +62,7 @@
     "prettier": "^2.0.5",
     "react-domproperty": "^1.0.4",
     "svg-parser": "^2.0.4",
-    "yargs": "^15.4.0"
+    "yargs": "^17.0.1"
   },
   "keywords": [
     "cli",
